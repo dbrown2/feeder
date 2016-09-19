@@ -1,0 +1,28 @@
+Web site:
+
+https://piface.github.io/pifacedigitalio/
+
+
+Example:
+
+import pifacedigitalio as pfd
+
+pf = pdf.PiFaceDigital()
+pf.relays[0].turn_on()
+
+
+def toggle_led0(event):
+...     event.chip.leds[0].toggle()
+...
+>>> pifacedigital = pifacedigitalio.PiFaceDigital()
+>>> listener = pifacedigitalio.InputEventListener(chip=pifacedigital)
+>>> listener.register(0, pifacedigitalio.IODIR_FALLING_EDGE, toggle_led0)
+>>> listener.activate()
+
+
+listener.deactivate()
+
+
+
+
+
